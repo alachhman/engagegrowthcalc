@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/engagegrowthcalc/static/css/main.f25ee5df.css",
+    "main.js": "/engagegrowthcalc/static/js/main.877ad3f1.js",
+    "static/js/787.0de10432.chunk.js": "/engagegrowthcalc/static/js/787.0de10432.chunk.js",
+    "index.html": "/engagegrowthcalc/index.html",
+    "main.f25ee5df.css.map": "/engagegrowthcalc/static/css/main.f25ee5df.css.map",
+    "main.877ad3f1.js.map": "/engagegrowthcalc/static/js/main.877ad3f1.js.map",
+    "787.0de10432.chunk.js.map": "/engagegrowthcalc/static/js/787.0de10432.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f25ee5df.css",
+    "static/js/main.877ad3f1.js"
+  ]
+}
