@@ -39,7 +39,10 @@
   font-size: 18px;
   color: white;
 }
-.main-contents{}
+.main-contents{
+  display: flex;
+  gap: 16px;
+}
 .main-options{
   width: 100%;
   display: flex;
@@ -52,6 +55,7 @@
   margin-top: 16px;
   background-color: #2f2856;
   max-width: 300px;
+  min-width: 300px;
 }
 .main-results-table{
 
