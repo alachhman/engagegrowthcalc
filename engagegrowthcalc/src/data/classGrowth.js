@@ -36,7 +36,7 @@ const classGrowth = [
         bld: 0
     },
     {
-        name: 'Lord',
+        name: 'Lord (Alcryst)',
         hp: 10,
         str: 10,
         mag: 0,
@@ -228,7 +228,7 @@ const classGrowth = [
         bld: 0
     },
     {
-        name: 'Wing Tamer',
+        name: 'Wing Tamer (Hortensia)',
         hp: 0,
         str: 0,
         mag: 15,
@@ -300,7 +300,7 @@ const classGrowth = [
         bld: 5
     },
     {
-        name: 'Lord',
+        name: 'Lord (Diamant)',
         hp: 15,
         str: 20,
         mag: 0,
@@ -528,7 +528,7 @@ const classGrowth = [
         bld: 0
     },
     {
-        name: 'Noble',
+        name: 'Noble (Celine)',
         hp: 0,
         str: 5,
         mag: 10,
@@ -540,7 +540,7 @@ const classGrowth = [
         bld: 0
     },
     {
-        name: 'Noble',
+        name: 'Noble (Alfred)',
         hp: 15,
         str: 15,
         mag: 0,
@@ -636,7 +636,7 @@ const classGrowth = [
         bld: 0
     },
     {
-        name: 'Wing Tamer',
+        name: 'Wing Tamer (Ivy)',
         hp: 5,
         str: 0,
         mag: 20,
