@@ -29,7 +29,7 @@ let Calculator = () => {
         <div>
             <div className="main-options">
                 <Selection name="Unit" pool={unitGrowth} set={setUnit}/> |
-                <Selection name="Class" pool={classGrowth} set={setClass}/> |
+                <Selection name="Class" pool={classGrowth} set={setClass}/> VS
                 <Selection name="Class" pool={classGrowth} set={setClass2}/> |
                 <CheckBox label="Starsphere" set={setStarSphere}/>
             </div>
