@@ -156,7 +156,7 @@ const classGrowth = [
         bld: 0
     },
     {
-        name: 'Sentinel',
+        name: 'Sentinel (Fogado)',
         hp: 10,
         str: 5,
         mag: 0,
@@ -240,18 +240,6 @@ const classGrowth = [
         bld: 0
     },
     {
-        name: 'Melusine',
-        hp: 10,
-        str: 10,
-        mag: 10,
-        dex: 10,
-        spd: 15,
-        def: 10,
-        res: 10,
-        lck: 0,
-        bld: 5
-    },
-    {
         name: 'Sword Flier',
         hp: 5,
         str: 10,
@@ -324,7 +312,7 @@ const classGrowth = [
         bld: 5
     },
     {
-        name: 'Sentinel',
+        name: 'Sentinel (Timerra)',
         hp: 10,
         str: 10,
         mag: 0,

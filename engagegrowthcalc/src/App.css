@@ -39,6 +39,12 @@
   font-size: 18px;
   color: white;
 }
+.main-row{
+  width: 100%;
+
+  display: flex;
+  gap: 16px
+}
 .main-contents{
   display: flex;
   gap: 16px;
@@ -54,8 +60,8 @@
   padding: 16px;
   margin-top: 16px;
   background-color: #2f2856;
-  max-width: 300px;
-  min-width: 300px;
+  max-width: 400px;
+  min-width: 400px;
 }
 .main-results-table{
 
@@ -79,3 +85,16 @@
 }
 
 .divider {border: 1px solid white}
+
+.skill-container {
+  width: 100%;
+
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.skill-item {
+  flex-grow: 1;
+  text-align: center
+}

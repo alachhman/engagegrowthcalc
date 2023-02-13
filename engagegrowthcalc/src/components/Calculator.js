@@ -4,23 +4,20 @@ import {useEffect} from "react";
 import Selection from "./Selection";
 import CheckBox from "./CheckBox";
 
-import unitGrowth from "../data/unitGrowth";
-import classGrowth from "../data/classGrowth";
+import Units from "../data/Units";
+import Classes from "../data/Classes";
 import Divider from "./Divider";
 import Tooltip from "./Tooltip";
 
-
 let Calculator = () => {
-    const [Unit, setUnit] = React.useState(unitGrowth[0]);
-    const [Class, setClass] = React.useState(classGrowth[0])
-    const [Class2, setClass2] = React.useState(classGrowth[0])
+    const [Unit, setUnit] = React.useState(Units[0]);
+    const [Class, setClass] = React.useState(Classes[0])
     const [StarSphere, setStarSphere] = React.useState(false)
 
     useEffect(x => {
         console.log({
             Unit: Unit,
             Class: Class,
-            Class2: Class2,
             StarSphere: StarSphere
         })
     })
@@ -28,16 +25,30 @@ let Calculator = () => {
     return (
         <div>
             <div className="main-options">
-                <Selection name="Unit" pool={unitGrowth} set={setUnit}/> |
-                <Selection name="Class" pool={classGrowth} set={setClass}/> VS
-                <Selection name="Class" pool={classGrowth} set={setClass2}/> |
+                <Selection name="Unit" pool={Units} set={setUnit}/> |
+                <Selection name="Class" pool={Classes} set={setClass}/>
                 <CheckBox label="Starsphere" set={setStarSphere}/>
             </div>
             <div className="main-contents">
                 <StatGraph unit={Unit} class={Class} ss={StarSphere}/>
-                <StatGraph unit={Unit} class={Class2} ss={StarSphere}/>
             </div>
         </div>
+    )
+}
+
+let SkillOut = (props) => {
+    let skillInfo = props.skill
+    console.log(skillInfo)
+    return (
+        <div>
+            <div className="skill-container">
+                <img src={skillInfo.img} className="skill-item" alt={skillInfo.name}
+                     style={{maxWidth: "50px", height: "auto"}}/>
+                <strong>{skillInfo.name}</strong>
+            </div>
+            {skillInfo.desc}
+        </div>
+
     )
 }
 
@@ -48,17 +59,28 @@ let StatGraph = (props) => {
 
     return (
         <div className="main-results">
-            <strong>Growths: {" " + Class.name}</strong>
+            <strong>Stats: {" " + Class.name}</strong>
             <Divider color={"white"}/>
             <div className="main-results-table">
                 {Object.keys(Unit).filter(x => x !== "name").map(x => {
+                    if (x === "skill") {
+                        return (
+                            <div>
+                                <Divider style={{marginBottom: "16px"}}/>
+                                <SkillOut skill={Unit[x]}/>
+                            </div>
+                        )
+                    }
                     return (
                         <StatOut statName={x.toUpperCase()}
                                  unitStat={Unit[x]}
-                                 classStat={(Unit.name === "Jean" ? Class[x] * 2 : Class[x])}
-                                 starSphere={StarSphere}/>
+                                 classStat={Class[x]}
+                                 starSphere={StarSphere}
+                                 unitName={Unit.name}
+                        />
                     )
                 })}
+                {<SkillOut skill={Class.skill}/> ?? ""}
             </div>
         </div>
     )
@@ -66,17 +88,19 @@ let StatGraph = (props) => {
 
 let StatOut = (props) => {
     let statname = props.statName;
+    let unitname = props.unitName;
     let unitStat = props.unitStat;
     let classStat = props.classStat;
     let starSphere = props.starSphere;
 
-    let total = unitStat + classStat + (starSphere ? 15 : 0)
+    let classGrowth = (unitname === "Jean") ? classStat.growth * 2 : classStat.growth
+    let total = unitStat.growth + classGrowth + (starSphere ? 15 : 0)
 
     return (
         <div className="statout">
             <Tooltip direction={"right"}
-                     content={"Unit Growth (" + unitStat + ") + Class Growth (" + classStat + ") " + (starSphere ? "+ StarSphere (15)" : "")}>
-                <strong>{statname}:</strong> {total}
+                     content={"Unit Growth (" + unitStat.growth + ") + Class Growth (" + classGrowth + ") " + (starSphere ? "+ StarSphere (15)" : "")}>
+                <strong>{statname}:</strong> {unitStat.max + classStat.max} | {total}%
             </Tooltip>
             <div style={{maxWidth: total + "%"}}>
                 <Divider color={statToColor(statname)}/>
