@@ -38,18 +38,26 @@ let Calculator = () => {
 
 let SkillOut = (props) => {
     let skillInfo = props.skill
-    console.log(skillInfo)
-    return (
-        <div>
-            <div className="skill-container">
-                <img src={skillInfo.img} className="skill-item" alt={skillInfo.name}
-                     style={{maxWidth: "50px", height: "auto"}}/>
-                <strong>{skillInfo.name}</strong>
-            </div>
-            {skillInfo.desc}
-        </div>
+    let label = props.label
 
-    )
+    if (!skillInfo.name) {
+        return (
+            <div/>
+        )
+    } else {
+        return (
+            <div>
+                <div className="skill-container">
+                    <img src={skillInfo.img} className="skill-item" alt={skillInfo.name}
+                         style={{maxWidth: "65px", height: "65px"}}/>
+                    <div className={"skill-item"}>
+                        <strong>{label + " - " + skillInfo.name}<br/></strong>
+                        <div style={{fontSize: "14px"}}>{skillInfo.desc}</div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
 }
 
 let StatGraph = (props) => {
@@ -67,7 +75,7 @@ let StatGraph = (props) => {
                         return (
                             <div>
                                 <Divider style={{marginBottom: "16px"}}/>
-                                <SkillOut skill={Unit[x]}/>
+                                <SkillOut skill={Unit[x]} label={"Personal Skill"}/>
                             </div>
                         )
                     }
@@ -80,7 +88,7 @@ let StatGraph = (props) => {
                         />
                     )
                 })}
-                {<SkillOut skill={Class.skill}/> ?? ""}
+                <SkillOut skill={Class.skill} label={"Class Skill"}/>
             </div>
         </div>
     )
