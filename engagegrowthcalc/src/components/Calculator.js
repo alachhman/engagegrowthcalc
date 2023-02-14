@@ -49,7 +49,7 @@ let SkillOut = (props) => {
             <div>
                 <div className="skill-container">
                     <img src={skillInfo.img} className="skill-item" alt={skillInfo.name}
-                         style={{maxWidth: "65px", height: "65px", border: "1px solid white", borderRadius: "15%"}}/>
+                         style={{maxWidth: "65px", height: "65px", border: "1px solid white", borderRadius: "20%"}}/>
                     <div className={"skill-item"}>
                         <strong>{label + " - " + skillInfo.name}<br/></strong>
                         <div style={{fontSize: "14px"}}>{skillInfo.desc}</div>
