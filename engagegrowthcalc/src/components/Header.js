@@ -4,7 +4,7 @@ const Header = () => {
     return(
         <div className="header-content">
             <section className="header-layout">
-                <h2>Engage Growth Comparison Calc</h2>
+                <h2>Engage Unit Comparison Calc</h2>
                 <h3 className="header-button-container" onClick={() => window.location.reload()}>
                     <button className={"header-button"}>
                         Reset
