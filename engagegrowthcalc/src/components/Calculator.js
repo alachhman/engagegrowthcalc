@@ -46,7 +46,8 @@ let Calculator = () => {
             <div className="main-options" style={{marginTop: "12px"}}>
                 <div style={{width: "89px", height: "20px"}}>
                     <Selection name="Emblem" pool={Emblems} set={changeEmblem} style={{height: "20px"}}/>
-                </div> |
+                </div>
+                |
                 <Selection name="BondLevel" pool={Emblem["statBoosts"]} set={setLevel} actual={Level}/>
             </div>
             <div className="main-contents">
@@ -126,7 +127,9 @@ let StatOut = (props) => {
     let level = props.level;
     let modifier = 0;
 
-    Object.keys(level).forEach(x => {if (statname === x.toUpperCase()) modifier = level[x]})
+    Object.keys(level).forEach(x => {
+        if (statname === x.toUpperCase()) modifier = level[x]
+    })
 
     let classGrowth = (unitname === "Jean") ? classStat.growth * 2 : classStat.growth
     let totalGrowth = unitStat.growth + classGrowth + (starSphere ? 15 : 0)
@@ -134,12 +137,17 @@ let StatOut = (props) => {
 
     return (
         <div className="statout">
+            <strong>
+                {statname + (statname === "HP" ? " " : "")}: {" "}
+            </strong>
             <Tooltip direction={"right"}
                      content={"Unit Growth (" + unitStat.growth + "%) + Class Growth (" + classGrowth + "%) " + (starSphere ? "+ StarSphere (15%)" : "")}>
-                <strong>
-                    {statname + (statname === "HP" ? " ": "")}: {" "}
-                </strong>
-                {totalGrowth + "%" + (totalGrowth.toString().length < 3 ? "\u00A0": "")} | {totalStat}{(totalStat.toString().length < 3 ? "\u00A0": "")} {(modifier !== 0) ? "(+" + modifier + ")": ""}
+
+                {totalGrowth + "%" + (totalGrowth.toString().length < 3 ? "\u00A0" : "")}|
+            </Tooltip>
+            <Tooltip direction={"right"}
+                     content={"Class Max (" + classStat.max + ") + Unit Modifier (" + unitStat.max + ")" + ((modifier !== 0) ? " + Emblem Modifier (+" + modifier + ")" : "")}>
+                {"\u00A0"}{totalStat}{(totalStat.toString().length < 3 ? "\u00A0" : "")} {(modifier !== 0) ? "(+" + modifier + ")" : ""}
             </Tooltip>
             <div style={{maxWidth: totalGrowth + "%"}}>
                 <Divider color={statToColor(statname)}/>
