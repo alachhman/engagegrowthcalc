@@ -2,9 +2,15 @@ import * as React from 'react';
 import {useEffect} from "react";
 
 const Selection = (props) => {
-    let pool = props.pool;
     let name = props.name;
     let actual = props.actual ?? ""
+    let pool = props.pool.sort((a, b) => {
+        if(typeof a.name == "number"){
+            return a - b
+        } else {
+            return a.name.localeCompare(b.name);
+        }
+    });
 
     const [value, setValue] = React.useState(props.initial ?? name);
 

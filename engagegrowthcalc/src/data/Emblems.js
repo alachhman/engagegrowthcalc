@@ -3478,55 +3478,55 @@ const Emblems = [
         "name": "Soren",
         "statBoosts": [
             {
-                "Level ": 1,
+                "name": 1,
                 "Mag": 1,
                 "Dex": 1,
                 "Res": 2
             },
             {
-                "Level ": 2,
+                "name": 2,
                 "Mag": 2,
                 "Dex": 1,
                 "Res": 2
             },
             {
-                "Level ": 3,
+                "name": 3,
                 "Mag": 2,
                 "Dex": 2,
                 "Res": 2
             },
             {
-                "Level ": 7,
+                "name": 7,
                 "Mag": 2,
                 "Dex": 2,
                 "Res": 3
             },
             {
-                "Level ": 8,
+                "name": 8,
                 "Mag": 3,
                 "Dex": 2,
                 "Res": 3
             },
             {
-                "Level ": 12,
+                "name": 12,
                 "Mag": 3,
                 "Dex": 3,
                 "Res": 3
             },
             {
-                "Level ": 14,
+                "name": 14,
                 "Mag": 3,
                 "Dex": 3,
                 "Res": 4
             },
             {
-                "Level ": 17,
+                "name": 17,
                 "Mag": 4,
                 "Dex": 3,
                 "Res": 4
             },
             {
-                "Level ": 19,
+                "name": 19,
                 "Mag": 4,
                 "Dex": 3,
                 "Res": 5
@@ -3714,55 +3714,55 @@ const Emblems = [
         "name": "Camilla",
         "statBoosts": [
             {
-                "Level ": 1,
+                "name": 1,
                 "HP": 3,
                 "Spd": 2,
                 "Res": 1
             },
             {
-                "Level ": 2,
+                "name": 2,
                 "HP": 3,
                 "Spd": 2,
                 "Res": 2
             },
             {
-                "Level ": 3,
+                "name": 3,
                 "HP": 5,
                 "Spd": 2,
                 "Res": 2
             },
             {
-                "Level ": 7,
+                "name": 7,
                 "HP": 5,
                 "Spd": 3,
                 "Res": 2
             },
             {
-                "Level ": 9,
+                "name": 9,
                 "HP": 5,
                 "Spd": 3,
                 "Res": 3
             },
             {
-                "Level ": 13,
+                "name": 13,
                 "HP": 7,
                 "Spd": 3,
                 "Res": 3
             },
             {
-                "Level ": 14,
+                "name": 14,
                 "HP": 7,
                 "Spd": 4,
                 "Res": 3
             },
             {
-                "Level ": 16,
+                "name": 16,
                 "HP": 7,
                 "Spd": 4,
                 "Res": 4
             },
             {
-                "Level ": 19,
+                "name": 19,
                 "HP": 7,
                 "Spd": 5,
                 "Res": 4
@@ -4387,6 +4387,227 @@ const Emblems = [
                 "desc": "If foe is equipped with a sword, unit takes 5 less damage during combat.",
                 "type": "Inheritable Skill",
                 "cost": 1000
+            }
+        ]
+    },
+    {
+        "name": "Lyn",
+        "statBoosts": [
+            {
+                "name": 1,
+                "Dex": 1,
+                "Spd": 1,
+                "Res": 1
+            },
+            {
+                "name": 2,
+                "Dex": 1,
+                "Spd": 2,
+                "Res": 1
+            },
+            {
+                "name": 4,
+                "Dex": 2,
+                "Spd": 2,
+                "Res": 1
+            },
+            {
+                "name": 7,
+                "Dex": 2,
+                "Spd": 2,
+                "Res": 2
+            },
+            {
+                "name": 9,
+                "Dex": 2,
+                "Spd": 3,
+                "Res": 2
+            },
+            {
+                "name": 12,
+                "Dex": 3,
+                "Spd": 3,
+                "Res": 2
+            },
+            {
+                "name": 14,
+                "Dex": 3,
+                "Spd": 3,
+                "Res": 3
+            },
+            {
+                "name": 16,
+                "Dex": 3,
+                "Spd": 4,
+                "Res": 3
+            },
+            {
+                "name": 17,
+                "Dex": 4,
+                "Spd": 4,
+                "Res": 3
+            },
+            {
+                "name": 19,
+                "Dex": 4,
+                "Spd": 5,
+                "Res": 3
+            }
+        ],
+        "skills": [
+            {
+                "bond": "1",
+                "name": "Speed +1",
+                "desc": "Grants Spd+1.",
+                "type": "Inheritable Skill",
+                "cost": 100
+            },
+            {
+                "bond": "1",
+                "name": "Alacrity",
+                "desc": "If unit initiates combat with a Spd advantage of 9 or more, unit’s follow-up (if possible) occurs before foe can counterattack.",
+                "type": "Sync Skill (Can Inherit)",
+                "cost": 1000
+            },
+            {
+                "bond": "1",
+                "name": "Call Doubles",
+                "desc": "Creates four illusory doubles that can make chain attacks with unit.[Dragon] +1 double created.[Flying] Doubles have +10 Avo",
+                "type": "Engage Skill",
+                "cost": 0
+            },
+            {
+                "bond": "1",
+                "name": "Astra Storm",
+                "desc": "Use to launch 5 bow attacks at 30% damage, up to range 10.[Dragon] Range +5.[Covert] Range +10.[Qi Adept] Breaks the target.",
+                "type": "Engage Attack",
+                "cost": 0
+            },
+            {
+                "bond": "1",
+                "name": "Killer Bow (Lyn)",
+                "desc": "Bow wielded by Emblem Lyn. Easily inflicts fatal wounds. Effective: Flying.",
+                "type": "Engage Weapon",
+                "cost": 0
+            },
+            {
+                "bond": "2",
+                "name": "Speed +2",
+                "desc": "Grants Spd+2.",
+                "type": "Inheritable Skill",
+                "cost": 300
+            },
+            {
+                "bond": "3",
+                "name": "Speedtaker",
+                "desc": "Grants a stacking Spd+2 each time unit initiates combat and defeats a foe. Bonus lasts for the rest of the battle. (Max +10)",
+                "type": "Sync Skill (Can Inherit)",
+                "cost": 2000
+            },
+            {
+                "bond": "4",
+                "name": "Bow Focus 1",
+                "desc": "Grants Hit+10 at a cost of Ddg-10 when using a bow.",
+                "type": "Inheritable Skill",
+                "cost": 100
+            },
+            {
+                "bond": "5",
+                "name": "Skill Inheritance",
+                "desc": "Unit can inherit this Emblem’s skills.",
+                "type": "Unlock",
+                "cost": 0
+            },
+            {
+                "bond": "6",
+                "name": "Bow Prof.",
+                "desc": "Proficiency with bows. Required for promotion to certain classes.",
+                "type": "Unlock",
+                "cost": 0
+            },
+            {
+                "bond": "7",
+                "name": "Bow Focus 2",
+                "desc": "Grants Hit+15 at a cost of Ddg-10 when using a bow.",
+                "type": "Inheritable Skill",
+                "cost": 300
+            },
+            {
+                "bond": "8",
+                "name": "Sword Prof.",
+                "desc": "Proficiency with swords. Required for promotion to certain classes.",
+                "type": "Unlock",
+                "cost": 0
+            },
+            {
+                "bond": "9",
+                "name": "Speed +3",
+                "desc": "Grants Spd+3.",
+                "type": "Inheritable Skill",
+                "cost": 500
+            },
+            {
+                "bond": "10",
+                "name": "Mani Katti",
+                "desc": "Divine sword wielded by Emblem Lyn. Effective: Cavalry, Armored.",
+                "type": "Engage Weapon",
+                "cost": 0
+            },
+            {
+                "bond": "12",
+                "name": "Bow Focus 3",
+                "desc": "Grants Hit+20 at a cost of Ddg-10 when using a bow.",
+                "type": "Inheritable Skill",
+                "cost": 500
+            },
+            {
+                "bond": "13",
+                "name": "Alacrity+",
+                "desc": "If unit initiates combat with a Spd advantage of 7 or more, unit’s follow-up (if possible) occurs before foe can counterattack.",
+                "type": "Sync Skill (Can Inherit)",
+                "cost": 2000
+            },
+            {
+                "bond": "14",
+                "name": "Bow Focus 4",
+                "desc": "Grants Hit+25 at a cost of Ddg-10 when using a bow.",
+                "type": "Inheritable Skill",
+                "cost": 700
+            },
+            {
+                "bond": "15",
+                "name": "Mulagir",
+                "desc": "Mighty bow wielded by Emblem Lyn. Grants Spd+5. Effective: Flying, Dragon.",
+                "type": "Engage Weapon",
+                "cost": 0
+            },
+            {
+                "bond": "16",
+                "name": "Speed +4",
+                "desc": "Grants Spd+4.",
+                "type": "Inheritable Skill",
+                "cost": 1000
+            },
+            {
+                "bond": "17",
+                "name": "Bow Focus 5",
+                "desc": "Grants Hit+30 at a cost of Ddg-10 when using a bow.",
+                "type": "Inheritable Skill",
+                "cost": 1000
+            },
+            {
+                "bond": "18",
+                "name": "Alacrity++",
+                "desc": "If unit initiates combat with a Spd advantage of 5 or more, unit’s follow-up (if possible) occurs before foe can counterattack.",
+                "type": "Sync Skill (Can Inherit)",
+                "cost": 3000
+            },
+            {
+                "bond": "19",
+                "name": "Speed +5",
+                "desc": "Grants Spd+5.",
+                "type": "Inheritable Skill",
+                "cost": 2000
             }
         ]
     }

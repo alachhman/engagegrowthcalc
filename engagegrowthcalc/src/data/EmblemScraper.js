@@ -21,7 +21,8 @@ const urls = [
     "https://serenesforest.net/engage/emblems/soren/",
     "https://serenesforest.net/engage/emblems/camilla/",
     "https://serenesforest.net/engage/emblems/veronica/",
-    "https://serenesforest.net/engage/emblems/chrom/"
+    "https://serenesforest.net/engage/emblems/chrom/",
+    "https://serenesforest.net/engage/emblems/lyn/"
 ];
 
 const scrapeData = async (urls) => {
